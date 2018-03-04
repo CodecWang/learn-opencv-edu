@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EmguCV.3.1.0.1\build\EmguCV.props" Condition="Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B260940-BF29-41AC-B02A-1027DD214000}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LearnOpenCVEdu</RootNamespace>
+    <AssemblyName>LearnOpenCVEdu</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.1.1.2225.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.1.1.2225.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.5\lib\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicFrms\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicFrms\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicFrms\FrmMainImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicFrms\FrmMainImage.Designer.cs">
+      <DependentUpon>FrmMainImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicFrms\FrmNormalImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicFrms\FrmNormalImage.Designer.cs">
+      <DependentUpon>FrmNormalImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicFrms\FrmProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicFrms\FrmProperties.Designer.cs">
+      <DependentUpon>FrmProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmBlur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmBlur.Designer.cs">
+      <DependentUpon>FrmBlur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmCameraCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmCameraCalibration.Designer.cs">
+      <DependentUpon>FrmCameraCalibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmCameras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmCameras.Designer.cs">
+      <DependentUpon>FrmCameras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmCannyEdge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmCannyEdge.Designer.cs">
+      <DependentUpon>FrmCannyEdge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmContours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmContours.Designer.cs">
+      <DependentUpon>FrmContours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmDrawing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmDrawing.Designer.cs">
+      <DependentUpon>FrmDrawing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmHistogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmHistogram.Designer.cs">
+      <DependentUpon>FrmHistogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmHoughs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmHoughs.Designer.cs">
+      <DependentUpon>FrmHoughs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmMorphology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmMorphology.Designer.cs">
+      <DependentUpon>FrmMorphology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmGeometricFlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmGeometricFlip.Designer.cs">
+      <DependentUpon>FrmGeometricFlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmGeometricResize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmGeometricResize.Designer.cs">
+      <DependentUpon>FrmGeometricResize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmGeometricRotate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmGeometricRotate.Designer.cs">
+      <DependentUpon>FrmGeometricRotate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmGeometricShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FrmGeometricShift.Designer.cs">
+      <DependentUpon>FrmGeometricShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FuncCvtColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FuncCvtColor.Designer.cs">
+      <DependentUpon>FuncCvtColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFunctions\FuncThreshold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFunctions\FuncThreshold.Designer.cs">
+      <DependentUpon>FuncThreshold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionArgs\BlurAverageArgs.cs" />
+    <Compile Include="FunctionArgs\CannyEdgeArgs.cs" />
+    <Compile Include="FunctionArgs\ContoursArgs.cs" />
+    <Compile Include="FunctionArgs\CvtColorArgs.cs" />
+    <Compile Include="FunctionArgs\HoughsArgs.cs" />
+    <Compile Include="FunctionArgs\MorphologyArgs.cs" />
+    <Compile Include="FunctionArgs\GeometricFlipArgs.cs" />
+    <Compile Include="FunctionArgs\GeometricResizeArgs.cs" />
+    <Compile Include="FunctionArgs\GeometricRotateArgs.cs" />
+    <Compile Include="FunctionArgs\GeometricShiftArgs.cs" />
+    <Compile Include="FunctionArgs\MainImageArgs.cs" />
+    <Compile Include="FunctionArgs\ThresholdArgs.cs" />
+    <Compile Include="FunctionArgs\VideoCaptureArgs.cs" />
+    <Compile Include="Models\ConstantFlags.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BasicFrms\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicFrms\FrmMainImage.resx">
+      <DependentUpon>FrmMainImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicFrms\FrmNormalImage.resx">
+      <DependentUpon>FrmNormalImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicFrms\FrmProperties.resx">
+      <DependentUpon>FrmProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmBlur.resx">
+      <DependentUpon>FrmBlur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmCameraCalibration.resx">
+      <DependentUpon>FrmCameraCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmCameras.resx">
+      <DependentUpon>FrmCameras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmCannyEdge.resx">
+      <DependentUpon>FrmCannyEdge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmContours.resx">
+      <DependentUpon>FrmContours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmDrawing.resx">
+      <DependentUpon>FrmDrawing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmHistogram.resx">
+      <DependentUpon>FrmHistogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmHoughs.resx">
+      <DependentUpon>FrmHoughs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmMorphology.resx">
+      <DependentUpon>FrmMorphology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmGeometricFlip.resx">
+      <DependentUpon>FrmGeometricFlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmGeometricResize.resx">
+      <DependentUpon>FrmGeometricResize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmGeometricRotate.resx">
+      <DependentUpon>FrmGeometricRotate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FrmGeometricShift.resx">
+      <DependentUpon>FrmGeometricShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FuncCvtColor.resx">
+      <DependentUpon>FuncCvtColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFunctions\FuncThreshold.resx">
+      <DependentUpon>FuncThreshold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.cabinet.files.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.cursor.default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.vector.line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.vector.rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.vector.circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.draw.paintbrush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.vector.rectangle_closing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.vector.circle_closing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\appbar.close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EmguCV.3.1.0.1\build\EmguCV.props'))" />
+    <Error Condition="!Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EmguCV.3.1.0.1\build\EmguCV.targets'))" />
+  </Target>
+  <Import Project="..\packages\EmguCV.3.1.0.1\build\EmguCV.targets" Condition="Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.targets')" />
+</Project>
