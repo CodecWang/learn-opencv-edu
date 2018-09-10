@@ -75,10 +75,13 @@
             this.MenuCascadeLayout = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuRestoreOriginMain = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.高级ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuCameraCalibration = new System.Windows.Forms.ToolStripMenuItem();
             this.双目标定及矫正ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.模板匹配ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.人脸检测ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.信息隐藏和获取ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListPicHistory = new System.Windows.Forms.ListView();
             this.MenuPicHistory = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MenuShowAlone = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +101,6 @@
             this.LinkFolderPath = new System.Windows.Forms.LinkLabel();
             this.BtnListViewView = new System.Windows.Forms.Button();
             this.BtnRefreshFolder = new System.Windows.Forms.Button();
-            this.MenuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.MenuPicHistory.SuspendLayout();
             this.PanelFolderImages.SuspendLayout();
@@ -231,41 +233,43 @@
             // MenuGeometricResize
             // 
             this.MenuGeometricResize.Name = "MenuGeometricResize";
-            this.MenuGeometricResize.Size = new System.Drawing.Size(268, 38);
+            this.MenuGeometricResize.Size = new System.Drawing.Size(228, 38);
             this.MenuGeometricResize.Text = "缩放…";
             this.MenuGeometricResize.Click += new System.EventHandler(this.MenuGeometricResize_Click);
             // 
             // MenuGeometricRotate
             // 
             this.MenuGeometricRotate.Name = "MenuGeometricRotate";
-            this.MenuGeometricRotate.Size = new System.Drawing.Size(268, 38);
+            this.MenuGeometricRotate.Size = new System.Drawing.Size(228, 38);
             this.MenuGeometricRotate.Text = "旋转…";
             this.MenuGeometricRotate.Click += new System.EventHandler(this.MenuGeometricRotate_Click);
             // 
             // MenuGeometricShift
             // 
             this.MenuGeometricShift.Name = "MenuGeometricShift";
-            this.MenuGeometricShift.Size = new System.Drawing.Size(268, 38);
+            this.MenuGeometricShift.Size = new System.Drawing.Size(228, 38);
             this.MenuGeometricShift.Text = "平移…";
             this.MenuGeometricShift.Click += new System.EventHandler(this.MenuGeometricShift_Click);
             // 
             // MenuGeometricFlip
             // 
             this.MenuGeometricFlip.Name = "MenuGeometricFlip";
-            this.MenuGeometricFlip.Size = new System.Drawing.Size(268, 38);
+            this.MenuGeometricFlip.Size = new System.Drawing.Size(228, 38);
             this.MenuGeometricFlip.Text = "镜像翻转…";
             this.MenuGeometricFlip.Click += new System.EventHandler(this.MenuGeometricFlip_Click);
             // 
             // 仿射变换ToolStripMenuItem
             // 
+            this.仿射变换ToolStripMenuItem.Enabled = false;
             this.仿射变换ToolStripMenuItem.Name = "仿射变换ToolStripMenuItem";
-            this.仿射变换ToolStripMenuItem.Size = new System.Drawing.Size(268, 38);
+            this.仿射变换ToolStripMenuItem.Size = new System.Drawing.Size(228, 38);
             this.仿射变换ToolStripMenuItem.Text = "仿射变换";
             // 
             // 透视变换ToolStripMenuItem
             // 
+            this.透视变换ToolStripMenuItem.Enabled = false;
             this.透视变换ToolStripMenuItem.Name = "透视变换ToolStripMenuItem";
-            this.透视变换ToolStripMenuItem.Size = new System.Drawing.Size(268, 38);
+            this.透视变换ToolStripMenuItem.Size = new System.Drawing.Size(228, 38);
             this.透视变换ToolStripMenuItem.Text = "透视变换";
             // 
             // MenuDrawingFunction
@@ -434,21 +438,21 @@
             // MenuVerticalLayout
             // 
             this.MenuVerticalLayout.Name = "MenuVerticalLayout";
-            this.MenuVerticalLayout.Size = new System.Drawing.Size(268, 38);
+            this.MenuVerticalLayout.Size = new System.Drawing.Size(195, 38);
             this.MenuVerticalLayout.Text = "垂直(&V)";
             this.MenuVerticalLayout.Click += new System.EventHandler(this.MenuVerticalLayout_Click);
             // 
             // MenuHorizontalLayout
             // 
             this.MenuHorizontalLayout.Name = "MenuHorizontalLayout";
-            this.MenuHorizontalLayout.Size = new System.Drawing.Size(268, 38);
+            this.MenuHorizontalLayout.Size = new System.Drawing.Size(195, 38);
             this.MenuHorizontalLayout.Text = "水平(&H)";
             this.MenuHorizontalLayout.Click += new System.EventHandler(this.MenuHorizontalLayout_Click);
             // 
             // MenuCascadeLayout
             // 
             this.MenuCascadeLayout.Name = "MenuCascadeLayout";
-            this.MenuCascadeLayout.Size = new System.Drawing.Size(268, 38);
+            this.MenuCascadeLayout.Size = new System.Drawing.Size(195, 38);
             this.MenuCascadeLayout.Text = "层叠(&C)";
             this.MenuCascadeLayout.Click += new System.EventHandler(this.MenuCascadeLayout_Click);
             // 
@@ -467,33 +471,59 @@
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(109, 35);
             this.帮助ToolStripMenuItem.Text = "帮助(&H)";
             // 
+            // MenuAbout
+            // 
+            this.MenuAbout.Name = "MenuAbout";
+            this.MenuAbout.Size = new System.Drawing.Size(193, 38);
+            this.MenuAbout.Text = "关于(&A)";
+            this.MenuAbout.Click += new System.EventHandler(this.MenuAbout_Click);
+            // 
             // 高级ToolStripMenuItem
             // 
             this.高级ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuCameraCalibration,
             this.双目标定及矫正ToolStripMenuItem,
-            this.模板匹配ToolStripMenuItem});
+            this.模板匹配ToolStripMenuItem,
+            this.人脸检测ToolStripMenuItem,
+            this.信息隐藏和获取ToolStripMenuItem});
             this.高级ToolStripMenuItem.Name = "高级ToolStripMenuItem";
-            this.高级ToolStripMenuItem.Size = new System.Drawing.Size(74, 35);
-            this.高级ToolStripMenuItem.Text = "高级";
+            this.高级ToolStripMenuItem.Size = new System.Drawing.Size(107, 35);
+            this.高级ToolStripMenuItem.Text = "高级(&A)";
             // 
             // MenuCameraCalibration
             // 
+            this.MenuCameraCalibration.Enabled = false;
             this.MenuCameraCalibration.Name = "MenuCameraCalibration";
             this.MenuCameraCalibration.Size = new System.Drawing.Size(280, 38);
             this.MenuCameraCalibration.Text = "单目标定及矫正";
             // 
             // 双目标定及矫正ToolStripMenuItem
             // 
+            this.双目标定及矫正ToolStripMenuItem.Enabled = false;
             this.双目标定及矫正ToolStripMenuItem.Name = "双目标定及矫正ToolStripMenuItem";
             this.双目标定及矫正ToolStripMenuItem.Size = new System.Drawing.Size(280, 38);
             this.双目标定及矫正ToolStripMenuItem.Text = "双目标定及矫正";
             // 
             // 模板匹配ToolStripMenuItem
             // 
+            this.模板匹配ToolStripMenuItem.Enabled = false;
             this.模板匹配ToolStripMenuItem.Name = "模板匹配ToolStripMenuItem";
             this.模板匹配ToolStripMenuItem.Size = new System.Drawing.Size(280, 38);
             this.模板匹配ToolStripMenuItem.Text = "模板匹配";
+            // 
+            // 人脸检测ToolStripMenuItem
+            // 
+            this.人脸检测ToolStripMenuItem.Enabled = false;
+            this.人脸检测ToolStripMenuItem.Name = "人脸检测ToolStripMenuItem";
+            this.人脸检测ToolStripMenuItem.Size = new System.Drawing.Size(280, 38);
+            this.人脸检测ToolStripMenuItem.Text = "人脸检测";
+            // 
+            // 信息隐藏和获取ToolStripMenuItem
+            // 
+            this.信息隐藏和获取ToolStripMenuItem.Enabled = false;
+            this.信息隐藏和获取ToolStripMenuItem.Name = "信息隐藏和获取ToolStripMenuItem";
+            this.信息隐藏和获取ToolStripMenuItem.Size = new System.Drawing.Size(280, 38);
+            this.信息隐藏和获取ToolStripMenuItem.Text = "信息隐藏和获取";
             // 
             // ListPicHistory
             // 
@@ -646,10 +676,10 @@
             this.LinkFolderPath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LinkFolderPath.Location = new System.Drawing.Point(16, 80);
             this.LinkFolderPath.Name = "LinkFolderPath";
-            this.LinkFolderPath.Size = new System.Drawing.Size(128, 31);
+            this.LinkFolderPath.Size = new System.Drawing.Size(126, 31);
             this.LinkFolderPath.TabIndex = 2;
             this.LinkFolderPath.TabStop = true;
-            this.LinkFolderPath.Text = "linkLabel1";
+            this.LinkFolderPath.Text = "linkFolder";
             this.LinkFolderPath.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkFolderPath_LinkClicked);
             // 
             // BtnListViewView
@@ -676,13 +706,6 @@
             this.BtnRefreshFolder.UseVisualStyleBackColor = true;
             this.BtnRefreshFolder.Click += new System.EventHandler(this.BtnRefreshFolder_Click);
             // 
-            // MenuAbout
-            // 
-            this.MenuAbout.Name = "MenuAbout";
-            this.MenuAbout.Size = new System.Drawing.Size(268, 38);
-            this.MenuAbout.Text = "关于(&A)";
-            this.MenuAbout.Click += new System.EventHandler(this.MenuAbout_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -700,7 +723,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMain";
+            this.Text = "    ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.MainMenu.ResumeLayout(false);
@@ -786,6 +809,8 @@
         private System.Windows.Forms.ToolStripMenuItem 双目标定及矫正ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuSplitChannels;
         private System.Windows.Forms.ToolStripMenuItem MenuAbout;
+        private System.Windows.Forms.ToolStripMenuItem 人脸检测ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 信息隐藏和获取ToolStripMenuItem;
     }
 }
 

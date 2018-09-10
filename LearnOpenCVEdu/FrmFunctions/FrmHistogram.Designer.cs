@@ -59,8 +59,9 @@
             // LinkHistogram
             // 
             this.LinkHistogram.AutoSize = true;
+            this.LinkHistogram.Dock = System.Windows.Forms.DockStyle.Right;
             this.LinkHistogram.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LinkHistogram.Location = new System.Drawing.Point(166, 585);
+            this.LinkHistogram.Location = new System.Drawing.Point(698, 0);
             this.LinkHistogram.Name = "LinkHistogram";
             this.LinkHistogram.Size = new System.Drawing.Size(354, 31);
             this.LinkHistogram.TabIndex = 17;

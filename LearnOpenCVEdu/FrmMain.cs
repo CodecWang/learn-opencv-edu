@@ -1139,7 +1139,6 @@ namespace LearnOpenCVEdu
         }
         #endregion
 
-
         #region 菜单：帮助
         /// <summary>
         /// 关于
@@ -1151,7 +1150,6 @@ namespace LearnOpenCVEdu
         }
         #endregion
 
-
         /// <summary>
         /// 更新界面的显示与否、可用与否状态
         /// </summary>
@@ -1161,7 +1159,7 @@ namespace LearnOpenCVEdu
                 MenuThreshold.Enabled = MenuGeometric.Enabled = MenuDrawingFunction.Enabled =
                 MenuBlur.Enabled = MenuShowProperties.Enabled = MenuHistogram.Enabled =
                 MenuMorphology.Enabled = MenuCannyEdge.Enabled = MenuContoursFeatures.Enabled =
-                MenuHoughTransform.Enabled = MenuSaveCurrent.Enabled = ConstantFlags.IS_ORIGIN_IMAGE_OPENED;
+                MenuHoughTransform.Enabled = MenuSaveCurrent.Enabled = MenuSplitChannels.Enabled = ConstantFlags.IS_ORIGIN_IMAGE_OPENED;
 
             //历史图片的右键菜单
             MenuShowAlone.Enabled = MenuBeMain.Enabled = MenuRemove.Enabled = MenuSaveHistory.Enabled = ConstantFlags.IS_PIC_HISTORY_SELECTED;
@@ -1280,17 +1278,6 @@ namespace LearnOpenCVEdu
             }
 
             return false;
-        }
-
-        /// <summary>
-        /// 检查相比原图，是否做了更改
-        /// </summary>
-        private void CheckImageUpdates()
-        {
-            if (mCurrentImage != mOriginImage)
-            {
-                MessageBox.Show("图片已更改");
-            }
         }
 
         /// <summary>
