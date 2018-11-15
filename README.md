@@ -6,6 +6,7 @@
 
 - 编写环境：C#+OpenCV（EmguCV）
 
+![](http://pic.ex2tron.top/cv2_learn_opencv_edu_soft_screenshot.jpg)
 
 ## TODO：
 
